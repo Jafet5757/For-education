@@ -1,2 +1,0 @@
-# For-education
-Utilizar una plataforma tan potente como lo es youtube para la educación. Ofrece a la comunidad los mismos videos de youtube que ya están hechos pero con más herramientas (test, cursos, certificados, etc). Es una plataforma que funciona bajo el motor de videos de youtube, pero en una página especializada en educación, gratuita y con el objetivo de reunir videos educativos de youtube y animar a las personas a compartir su conocimiento.

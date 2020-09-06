@@ -1,0 +1,27 @@
+body{
+	background-color: #f1f1f1;
+}
+footer{
+	background-color: white;
+}
+.semi-dark{
+	background-color: #E3E2E2;
+}
+.border-redond-sm{
+	border-radius: 6px;
+}
+.border-redond-md{
+	border-radius: 16px;
+}
+.shadow-box{
+	box-shadow: 6px 8px 6px #BABABA;
+}
+.pointer{
+	cursor: pointer;
+}
+.c-red{
+	color: red;
+}
+.c-green{
+	color: green;
+}
