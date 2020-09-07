@@ -48,7 +48,7 @@
 
 	<!-- Login-->
 
-	<form class="mx-5 my-2" id="formula" action="home-courses.html">
+        <form class="mx-5 my-2" id="formula" action="UserController" method="post">
 		<div class="container text-center p-3">
 			<div class="row">
 				<div class="col-md-2"></div>
@@ -59,7 +59,7 @@
 						<div class="input-group-prepend">
 						    <span class="input-group-text"><i class="far fa-user"></i></span>
 						</div>
-						<input type="text" class="form-control" required>
+						<input type="text" name="nombre" class="form-control" required>
 					</div>
 					<br><br>
 					<div class="form-row">
@@ -69,7 +69,7 @@
 								<div class="input-group-prepend">
 									<span class="input-group-text"><i class="fas fa-file-signature"></i></span>
 								</div>
-								<input type="text" class="form-control" id="inputNameF" required>
+								<input type="text" name="app" class="form-control" id="inputNameF" required>
 							</div>
 						</div>
 						<div class="form-group col-md-6">
@@ -78,7 +78,7 @@
 								<div class="input-group-prepend">
 									<span class="input-group-text"><i class="fas fa-file-signature"></i></span>
 								</div>
-								<input type="text" class="form-control" id="inputNameM" required>
+								<input type="text" name="apm" class="form-control" id="inputNameM" required>
 							</div>
 						</div>
 					</div>
@@ -90,28 +90,29 @@
 								<div class="input-group-prepend">
 									<span class="input-group-text"><i class="far fa-envelope"></i></span>
 								</div>
-								<input type="text"id="inputE" class="form-control" required>
+								<input type="text" name="correo" id="inputE" class="form-control" required>
 							</div>
 						</div>
 					</div>
 
 					<br>
-					Ingrese una contraseÃ±a
+					Ingrese una contraseña
 					<br><br>
 					<div class="input-group input-group-sm">
 						<div class="input-group-prepend">
 						    <span class="input-group-text"><i class="fas fa-key"></i></span>
 						</div>
-						<input type="password" class="form-control" required>
+						<input type="password" name="p1" class="form-control" required>
 					</div>
 
-					<br>Ingrese de nuevo la contraseÃ±a
+					<br>Ingrese de nuevo la contraseña
 					<br>
 					<div class="input-group input-group-sm">
 						<div class="input-group-prepend">
 						    <span class="input-group-text"><i class="fas fa-key"></i></span>
 						</div>
-						<input type="password" class="form-control" required>
+						<input type="password" name="p2" class="form-control" required>
+                                                <input type="hidden" name="instruccion" value="newUser">
 					</div>
 
 					<br><br><br>
