@@ -1,4 +1,6 @@
 <!DOCTYPE html>
+<%@ page import="java.util.*" %>
+<%@taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>
 <html>
 <head>
 	<!-- Este es el link de bootstrap-->
@@ -25,32 +27,72 @@
 	<!-- Desarrollador: Kevin Jafet
 		Fecha: 09/08/2020 03:33 PM
 	-->
-
-	<!-- Este es el navBar-->
-	<nav class="navbar navbar-expand-md navbar-light bg-light">
-		<div class="container">
-			<a href="index.html" class="navbar-brand">
-				DeepTure
-			</a>
-		<button class="navbar-toggler" data-toggle="collapse" data-target="#secondNavbar">
-			<span class="navbar-toggler-icon"></span>
-		</button>
-			<div class="collapse navbar-collapse" id="secondNavbar">
-				<ul class="navbar-nav ml-auto">
-					<li class="nav-item"><a class="nav-link" href="index.html">Inicio</a></li>
-					<li class="nav-item"><a class="nav-link active" href="#">Cursos</a></li>
-					<li class="nav-item"><a class="nav-link" href="my-courses.html">Mis cursos</a></li>
-					<li class="nav-item"><a class="nav-link" href="description-course-create.html">Crear curso</a></li>
-					<li class="nav-item"><a class="nav-link" href="my-plan-formation.html">Mi plan de formaciÃ³n</a></li>
-				</ul>
-				<form class="form-inline">
-					<input type="text" class="form-control" placeholder="Course">
-					<button class="btn btn-outline-primary ml-2">Buscar</button>
-				</form>
-			</div>
-		</div>
-	</nav>
-
+        
+        <%
+            /*if(request.getAttribute("id_user")!=null && request.getAttribute("id_user")!=""){
+               session.setAttribute("id",request.getAttribute("id_user")); 
+            }else{
+                out.print("<script>window.location.replace('index.jsp');</script>");
+            }*/
+            boolean tst=false;
+        %>
+        
+        
+        <% if(request.getAttribute("id_user")!=null || session.getAttribute("id")!=null){%>
+            <!-- Este es el navBar-->
+            <% session.setAttribute("id",request.getAttribute("id_user")); 
+            tst=true; %>
+            <%=session.getAttribute("id")%><%=request.getAttribute("id_user")%>
+            <nav class="navbar navbar-expand-md navbar-light bg-light">
+                    <div class="container">
+                            <a href="index.jsp" class="navbar-brand">
+                                    JKM
+                            </a>
+                    <button class="navbar-toggler" data-toggle="collapse" data-target="#secondNavbar">
+                            <span class="navbar-toggler-icon"></span>
+                    </button>
+                            <div class="collapse navbar-collapse" id="secondNavbar">
+                                    <ul class="navbar-nav ml-auto">
+                                            <li class="nav-item"><a class="nav-link" href="index.jsp">Inicio</a></li>
+                                            <li class="nav-item"><a class="nav-link active" href="#">Cursos</a></li>
+                                            <li class="nav-item"><a class="nav-link" href="my-courses.jsp">Mis cursos</a></li>
+                                            <li class="nav-item"><a class="nav-link" href="description-course-create.jsp">Crear curso</a></li>
+                                            <li class="nav-item"><a class="nav-link" href="my-plan-formation.jsp">Mi plan de formación</a></li>
+                                    </ul>
+                                    <form class="form-inline">
+                                            <input type="text" class="form-control" placeholder="Course">
+                                            <button class="btn btn-outline-primary ml-2">Buscar</button>
+                                    </form>
+                            </div>
+                    </div>
+            </nav>
+        <%}else{%>
+            
+                <!-- Este es el navBar-->
+                <nav class="navbar navbar-expand-md navbar-light bg-light">
+                        <div class="container">
+                                <a href="index.jsp" class="navbar-brand">
+                                        JKM
+                                </a>
+                        <button class="navbar-toggler" data-toggle="collapse" data-target="#secondNavbar">
+                                <span class="navbar-toggler-icon"></span>
+                        </button>
+                                <div class="collapse navbar-collapse" id="secondNavbar">
+                                        <ul class="navbar-nav ml-auto">
+                                                <li class="nav-item"><a class="nav-link" href="index.jsp">Inicio</a></li>
+                                                <li class="nav-item"><a class="nav-link active" href="#">Cursos</a></li>
+                                                <li class="nav-item"><a class="nav-link" href="login.jsp">Iniciar sesion</a></li>
+                                                <li class="nav-item"><a class="nav-link" href="logup.jsp">Registrarse</a></li>
+                                        </ul>
+                                        <form class="form-inline">
+                                                <input type="text" class="form-control" placeholder="Course">
+                                                <button class="btn btn-outline-primary ml-2">Buscar</button>
+                                        </form>
+                                </div>
+                        </div>
+                </nav>
+        <%}%>
+        
 			<!-- Este es el carrusel-->
 			<div id="carouselExampleControls" class="carousel slide" data-ride="carousel" id="car">
 			  <div class="carousel-inner">
@@ -271,7 +313,7 @@
 						<img src="img/git.jpg" class="card-img-top" alt="...">
 						<div class="card-body">
 							 <h5 class="card-title text-center">Curso de java</h5>
-							 <p class="card-text">Creado por: Kevin Jafet<br> MÃ³dulos:8 &nbsp;&nbsp; Duracion:9-13hrs</p>
+							 <p class="card-text">Creado por: Kevin Jafet<br> Módulos:8 &nbsp;&nbsp; Duracion:9-13hrs</p>
 							 <center><a href="StartCourse.html" class="btn btn-primary px-4">Comenzar curso</a></center>
 						</div>
 				</div>

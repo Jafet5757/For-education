@@ -5,9 +5,8 @@
 	<meta name="viewport" content="width=device-width, user-scalable=no">
 	<!-- Este es el link de bootstrap-->
 	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
-	<meta charset="utf-8">
-	<title>Login</title>
-
+	<meta charset="UTF-8">
+	<title>Error inesperado</title>
 	<!-- Esto es para el scroll animated-->
 	<script src="https://unpkg.com/scrollreveal"></script>
 
@@ -17,29 +16,27 @@
 	<!-- Este es el kit de fontAwesome -->
 	<script src="https://kit.fontawesome.com/f7f3b1c29f.js" crossorigin="anonymous"></script>
 
-	<!-- Este es el link de nuestro css personalizado-->
-	<link rel="stylesheet" type="text/css" href="css/general.css">
-	<link rel="stylesheet" type="text/css" href="css/login.css">
+	<!--css personalizado
+	<link rel="stylesheet" type="text/css" href="css/general.css">-->
 </head>
 <body>
 
-
 	<!-- Este es el navBar-->
 	<nav class="navbar navbar-expand-lg navbar-light bg-light">
-	  <a class="navbar-brand" href="index.html">JKM</a>
+	  <a class="navbar-brand" href="#">JKM</a>
 	  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
 	    <span class="navbar-toggler-icon"></span>
 	  </button>
 	  <div class="collapse navbar-collapse" id="navbarNav">
 	    <ul class="navbar-nav ml-auto">
-	      <li class="nav-item">
-	        <a class="nav-link" href="index.jsp">Inicio</a>
+	      <li class="nav-item active">
+	        <a class="nav-link" href="#">Inicio</a>
 	      </li>
 	      <li class="nav-item">
 	        <a class="nav-link" href="home-courses.jsp">Cursos</a>
 	      </li>
 	      <li class="nav-item">
-	        <a class="nav-link active" href="#">Iniciar sesion</a>
+	        <a class="nav-link" href="login.jsp">Iniciar sesion</a>
 	      </li>
 	      <li class="nav-item">
 	        <a class="nav-link" href="logup.jsp">Registrarse</a>
@@ -48,44 +45,17 @@
 	  </div>
 	</nav>
 
-	<!-- Login-->
 
-        <form class="m-5" id="formula" action="UserController" method="post">
-		<div class="container text-center p-3">
-			<div class="row">
-				<div class="col-md-2"></div>
-				<div class="col-md-8  bg-white pb-5 form-content-components">
-					Ingrese su ID de usuario o correo<br>
-					<br>
-					<div class="input-group input-group-sm">
-						<div class="input-group-prepend">
-						    <span class="input-group-text"><i class="far fa-user"></i></span>
-						</div>
-						<input type="text" class="form-control" name="username" required>
-					</div>
-
-					<br><br><br>
-					Ingrese su contraseña
-					<br><br>
-					<div class="input-group input-group-sm">
-						<div class="input-group-prepend">
-						    <span class="input-group-text"><i class="fas fa-key"></i></span>
-						</div>
-						<input type="password" class="form-control" name="password" required>
-                                                <input type="hidden" name="instruccion" value="login">
-					</div>
-					<br><br><br>
-					<input type="submit" value="Ingresar" class="btn btn-primary px-5"><br>
-					<a href="logup.html">Registrarse</a>
-				</div>
-				<div class="col-md-2"></div>
-			</div>
+	<section class="container mt-5">
+		<div class="jumbotron">
+                    <p class="" style="font-size: 45px">ERROR</p>
+		  <p class="lead"><%=request.getAttribute("simpleMessage")%></p>
+		  <hr class="my-4">
+		  <p><%=request.getAttribute("allMessage")%></p>
+                  <a class="btn btn-primary btn-lg px-4" href="<%=request.getAttribute("redirect")%>" role="button">Regresar</a>
 		</div>
-	</form>
-
-	<script type="text/javascript">
-		ScrollReveal().reveal('#formula', { delay: 500 , origin:'bottom', distance: '500px'});
-	</script>
+	</section>
+	
 
 </body>
 <!--Estos js son de bootsrap -->
